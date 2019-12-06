@@ -8,7 +8,7 @@ use GuzzleHttp\Exception\RequestException;
 
 class Client
 {
-    const API_BASE_URL = "http://35.202.62.122/api/";
+    const API_BASE_URL = "https://ecommerce.test.mipaquete.com/api/";
     const SANDBOX_API_BASE_URL = "https://ecommerce.test.mipaquete.com/api/";
 
     protected $_email;

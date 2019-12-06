@@ -33,10 +33,10 @@ class MipaqueteTest extends TestCase
             "declared_value" => 3000,
             "quantity" => 1,
             "special_service" => 2, //0 ninguno, 2 recaudo, 3  para retorno de documento firmado
-            "value_collection" => 2000, //Valor a recaudar (Con servicio de recaudo)
+            "value_collection" => 3000, //Valor a recaudar (Con servicio de recaudo)
             "payment_type" => 1, // 1 pago con saldo, 5 pago con recaudo
             "value_select" => 1, //criterio selección 1 precio, 2 tiempo, 3 servicio
-            "delivery" => "5cb0f5fd244fe2796e65f9c"
+            //"delivery" => "5cb0f5fd244fe2796e65f9c" //opcional
         ];
 
         $response = $this->mipaquete->calculateSending($params);
@@ -49,16 +49,16 @@ class MipaqueteTest extends TestCase
         $params = [
             "type" => 1, //1 paqueteria, 2 Mensajería
             "origin" => "5aa1bc46b63d79e54e7da346",
-            "destiny" => "5aa1bc46b63d79e54e7da346",
-            "width" => 3,
-            "height" => 2,
-            "large" => 4,
-            "weight" => 7,
+            "destiny" => "5aa1bc45b63d79e54e7da311",
+            "width" => 10,
+            "height" => 25,
+            "large" => 20,
+            "weight" => 2,
             "declared_value" => 3000,
             "quantity" => 1,
-            "payment_type" => 1, // 1 pago con saldo, 5 pago con recaudo
-            "value_select" => 3, //criterio selección 1 precio, 2 tiempo, 3 servicio
-            "delivery" => "5cb0f5fd244fe2796e65f9c"
+            "payment_type" => 1, // 1 pago con saldo
+            "value_select" => 1, //criterio selección 1 precio, 2 tiempo, 3 servicio
+            //"delivery" => "5cb0f5fd244fe2796e65f9c" //opcional
         ];
 
         $response = $this->mipaquete->calculateSending($params);
